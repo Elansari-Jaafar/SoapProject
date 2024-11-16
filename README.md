@@ -14,11 +14,18 @@ SoapProject is a practical demonstration of implementing a SOAP web service usin
 - **Testing with SoapUI**: Provides detailed instructions for testing SOAP methods using SoapUI.
 
 ## Project Structure
-
-SoapProject ├── src/main/java/com/example/demo │ ├── config # Apache CXF configuration │ ├── entities # JPA entity definitions (e.g., Compte) │ ├── repositories # Spring Data JPA repositories │ ├── ws # SOAP web service implementations │ └── DemoApplication.java # Main Spring Boot application ├── src/main/resources │ ├── application.properties # Configuration properties └── pom.xml # Maven dependencies
-
-php
-Copy code
+```
+SoapProject
+ ├── src/main/java/com/example/demo
+ │ ├── config # Apache CXF configuration
+ │ ├── entities # JPA entity definitions (e.g., Compte)
+ │ ├── repositories # Spring Data JPA repositories
+ │ ├── ws # SOAP web service implementations
+ │ └── DemoApplication.java # Main Spring Boot application
+ ├── src/main/resources
+ │ ├── application.properties # Configuration properties
+ └── pom.xml # Maven dependencies
+```
 
 ## Dependencies
 
@@ -43,7 +50,7 @@ The project relies on the following Maven dependencies:
 ```
 # Configuration
 ## Database Configuration
-Configure the H2 database in application.properties:
+Configure the H2 database in **application.properties**:
 
 ```properties
 spring.datasource.url=jdbc:h2:mem:testdb
@@ -54,7 +61,7 @@ spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
 ```
 ## Apache CXF Endpoint
-Configure the SOAP endpoint in CxfConfig.java:
+Configure the SOAP endpoint in **CxfConfig.java**:
 ```
 @Configuration
 @AllArgsConstructor
@@ -85,15 +92,15 @@ mvn spring-boot:run
 http://localhost:8080/ws?wsdl
 ```
 # Testing the Service
-#### Use SoapUI for testing SOAP endpoints.
-#### Example methods to test:
-    getComptes: Retrieve all accounts.
-    getCompteById: Retrieve an account by its ID.
-    createCompte: Create a new account with initial solde and type.
-    deleteCompte: Delete an account by its ID.
+- Use [SoapUI](https://www.soapui.org/) for testing SOAP endpoints.
+- Example methods to test:
+    - **getComptes:** Retrieve all accounts.
+    - **getCompteById:** Retrieve an account by its ID.
+    - **createCompte:** Create a new account with initial **solde** and **type**.
+    - **deleteCompte:** Delete an account by its ID.
 # Author
-Elansari Jaafar
-GitHub Profile
+## Elansari Jaafar
+[GitHub Profile](https://github.com/Elansari-Jaafar)
 
 # License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the **LICENSE** file for details.
