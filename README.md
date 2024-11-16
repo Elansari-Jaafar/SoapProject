@@ -40,23 +40,22 @@ The project relies on the following Maven dependencies:
         <version>4.0.2</version>
     </dependency>
 </dependencies>
-Configuration
-Database Configuration
+```
+# Configuration
+## Database Configuration
 Configure the H2 database in application.properties:
 
-properties
-Copy code
+```properties
 spring.datasource.url=jdbc:h2:mem:testdb
 spring.datasource.username=sa
 spring.datasource.password=password
 spring.jpa.hibernate.ddl-auto=update
 spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
-Apache CXF Endpoint
+```
+## Apache CXF Endpoint
 Configure the SOAP endpoint in CxfConfig.java:
-
-java
-Copy code
+```
 @Configuration
 @AllArgsConstructor
 public class CxfConfig {
@@ -70,38 +69,31 @@ public class CxfConfig {
         return endpoint;
     }
 }
-Running the Project
-Clone the repository:
-
-bash
-Copy code
+```
+# Running the Project
+1. Clone the repository:
+```
 git clone https://github.com/Elansari-Jaafar/SoapProject.git
 cd SoapProject
-Build and run the application:
-
-bash
-Copy code
+```
+2. Build and run the application:
+```
 mvn spring-boot:run
-Access the WSDL: Open a browser and navigate to:
-
-bash
-Copy code
+```
+3. Access the WSDL: Open a browser and navigate to:
+```
 http://localhost:8080/ws?wsdl
-Testing the Service
-Use SoapUI for testing SOAP endpoints.
-Example methods to test:
-getComptes: Retrieve all accounts.
-getCompteById: Retrieve an account by its ID.
-createCompte: Create a new account with initial solde and type.
-deleteCompte: Delete an account by its ID.
-Author
+```
+# Testing the Service
+#### Use SoapUI for testing SOAP endpoints.
+#### Example methods to test:
+    getComptes: Retrieve all accounts.
+    getCompteById: Retrieve an account by its ID.
+    createCompte: Create a new account with initial solde and type.
+    deleteCompte: Delete an account by its ID.
+# Author
 Elansari Jaafar
 GitHub Profile
 
-License
+# License
 This project is licensed under the MIT License. See the LICENSE file for details.
-
-javascript
-Copy code
-
-Copy and save this content as `README.md` in your project's root directory.
